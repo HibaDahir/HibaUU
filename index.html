@@ -19,19 +19,22 @@
       <span class="logo" aria-hidden="true"></span> <!-- bevisst: viktig info kun i bilde uten tekstalternativ -->
       <span class="site-title">Min side</span>
     </header>
-
     <nav> <!-- bevisst: upresist role og ingen semantisk <nav> -->
-      <a href="#">Hjem</a>
-      <a href="#">Om oss</a>
-      <div class="dropdown">
-        <a href="#">Tjenester</a>
-        <ul>
-          <li><a href="#">Design</a></li>
-          <li><a href="#">Utvikling</a></li>
-          <li><a href="#">Konsulent</a></li>
+      <ul>
+        <li><a href="#">Hjem</a></li>
+        <li><a href="#">Om oss</a></li>
+        <li>
+          <details>
+            <summary>Tjenester</summary>
+            <ul>
+              <li><a href="#">Design</a></li>
+              <li><a href="#">Utvikling</a></li>
+              <li><a href="#">Konsulent</a></li>
+            </ul>
+          </details>
+          </li>
+          <li><a href="#">Kontakt</a></li>
         </ul>
-      </div>
-      <a href="#">Kontakt</a>
     </nav>
 
     <section>
@@ -64,12 +67,10 @@
             VELKOMMEN TIL DEN BESTE SIDEN NOENSINNE (LES VIKTIG TEKST HER OVER BAKGRUNNSBILDE)
           </h1>
           <section>
-            
-
             <h2>Denne teksten er veldig vanskelig å lese fordi den er smal, i store bokstaver og har lav kontrast. Den er også justert med blokkjustering som kan skape store mellomrom i linjene. Klikk her for mer info.</h2>
 
 
-          <div class="card form">
+          <article>
             <h4>Kontakt oss</h4>
             <!-- bevisst: ingen <label> og kun placeholder, dupliserte id-er, dårlig kontrast, farge som eneste signal -->
             <input type="text" id="navn" placeholder="Navn*">
@@ -84,9 +85,9 @@
             <p class="help">Felt merket med <span class="required">rød farge</span> er obligatoriske.</p>
             <p class="error">skjemaet er feil utfylt</p> <!-- bevisst: lav kontrast på feilmelding, små bokstaver -->
             <span class="fake-submit" role="button" tabindex="5">Send</span> <!-- bevisst: span som knapp, positiv tabindex -->
-          </div>
+          </article>
 
-          <div class="card weird-order">
+          <article>
             <h4>Mer innhold</h4>
             <p>
               <a href="#" tabindex="3">Les mer</a> |
@@ -96,18 +97,18 @@
             <p>
               <span class="btn" tabindex="4">Primær handling</span>
             </p>
-          </div>
+          </article>
 
-          <div class="card">
+          <darticle>
             <h4>Tabell uten overskrifter</h4>
             <table border="1" width="100%">
               <tr><td>1</td><td>2</td><td>3</td></tr>
               <tr><td>4</td><td>5</td><td>6</td></tr>
               <tr><td>7</td><td>8</td><td>9</td></tr>
             </table>
-          </div>
+          </article>
 
-          <div class="card">
+          <article>
             <h4>Masse lenker med samme tekst</h4>
             <ul>
               <li><a href="#">Les mer</a></li>
@@ -115,7 +116,7 @@
               <li><a href="#">Les mer</a></li>
               <li><a href="#">Les mer</a></li>
             </ul>
-          </div>
+          </article>
         </section> 
       </main>
 
