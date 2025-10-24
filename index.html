@@ -11,7 +11,7 @@
     <meta charset="utf-8">
     <!-- bevisst: blokkerer zoom (dårlig for UU) -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>Forside for verdens beste nettside</title> 
     </head>
   <body>
@@ -38,7 +38,7 @@
     </nav>
 
     <section>
-      <p>Viktig beskjed: Les dette! Klikk her! Klikk her! Klikk her! Veldig viktig! ✨</p>
+      <h2>Viktig beskjed: Les dette! Klikk her! Klikk her! Klikk her! Veldig viktig!</h2>
     </section>
 
 
@@ -72,20 +72,33 @@
 
           <article>
             <h4>Kontakt oss</h4>
-            <!-- bevisst: ingen <label> og kun placeholder, dupliserte id-er, dårlig kontrast, farge som eneste signal -->
-            <input type="text" id="navn" placeholder="Navn*">
-            <input type="email" id="navn" placeholder="E-post*"> <!-- bevisst: duplisert id -->
-            <input type="tel" placeholder="Telefon">
-            <select>
+          <form>
+            <label>Navn:
+              <input type="text" id="navn" placeholder="Ola Nordmann" required>
+            </label>
+            <label>Email:
+              <input type="email" id="email" placeholder="eksempel@hiof.no" required>
+            </label>
+            <label>Telefon:
+              <input type="tel" placeholder="980 00 000" required>
+            </label>           
+             
+            <label for="service">Tjenester</label>
+            <select id="service">
               <option>Velg tema*</option>
               <option>Bestilling</option>
               <option>Support</option>
             </select>
-            <textarea rows="3" placeholder="Melding..."></textarea>
+
+            <label for="">Melding:
+              <textarea rows="3" placeholder="Lorum ipsum"></textarea>
+            </label>
+            
             <p class="help">Felt merket med <span class="required">rød farge</span> er obligatoriske.</p>
-            <p class="error">skjemaet er feil utfylt</p> <!-- bevisst: lav kontrast på feilmelding, små bokstaver -->
-            <span class="fake-submit" role="button" tabindex="5">Send</span> <!-- bevisst: span som knapp, positiv tabindex -->
+            <p class="error">skjemaet er feil utfylt</p> 
+            <input type="submit" value="Send">
           </article>
+        </form>
 
           <article>
             <h4>Mer innhold</h4>
@@ -101,7 +114,7 @@
 
           <darticle>
             <h4>Tabell uten overskrifter</h4>
-            <table border="1" width="100%">
+            <table>
               <tr><td>1</td><td>2</td><td>3</td></tr>
               <tr><td>4</td><td>5</td><td>6</td></tr>
               <tr><td>7</td><td>8</td><td>9</td></tr>
@@ -123,10 +136,10 @@
 
     <footer>
       <!-- bevisst: kontaktinfo kun i bilde uten alt-tekst -->
-      <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Facebook_icon.svg">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Twitter_logo.svg">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png">
-      <p style="font-size:10px; color:#bfbfbf">© 2025 ACME</p>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Facebook_icon.svg" alt="Facebook ikon til lenke til facebook">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Twitter_logo.svg" alt="Twitter ikon til lenke til Twitter">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram ikon til lenke til Instagram">
+      <p>© 2025 ACME</p>
     </footer>
   </body>
 </html>
