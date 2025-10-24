@@ -1,25 +1,17 @@
 <!DOCTYPE html>
-<!--
-  VIKTIG: Denne filen er BEVISST DÅRLIG for undervisning.
-  Den bryter en rekke WCAG-prinsipper og norsk UU-forskrift.
-  Oppgaven for studentene er å identifisere og forbedre feilene.
-  (Kun HTML + CSS – ingen JS.)
--->
 <html lang="nb">
-  <!-- bevisst: mangler lang-attributt på <html> -->
   <head>
     <meta charset="utf-8">
-    <!-- bevisst: blokkerer zoom (dårlig for UU) -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>Forside for verdens beste nettside</title> 
     </head>
   <body>
     <header>
-      <span class="logo" aria-hidden="true"></span> <!-- bevisst: viktig info kun i bilde uten tekstalternativ -->
+      <span class="logo" aria-hidden="true"></span> 
       <span class="site-title">Min side</span>
     </header>
-    <nav> <!-- bevisst: upresist role og ingen semantisk <nav> -->
+    <nav> 
       <ul>
         <li><a href="#">Hjem</a></li>
         <li><a href="#">Om oss</a></li>
@@ -38,27 +30,27 @@
     </nav>
 
     <section>
-      <h2>Viktig beskjed: Les dette! Klikk her! Klikk her! Klikk her! Veldig viktig!</h2>
+      <h2><a href="#">Les mer her for viktig informasjon anngående eksamen</a></h2>
     </section>
 
 
         <aside>
           <section>
-            <h4>Nyheter</h4> <!-- bevisst: hopper over h1/h2/h3 -->
-            <p>
-              <img src="https://upload.wikimedia.org/wikipedia/commons/6/65/No-Image-Placeholder.svg" alt=""> <!-- bevisst: tom alt på meningsbærende bilde -->
+            <h4>Nyheter</h4> 
+              <p>
+              <img src="https://upload.wikimedia.org/wikipedia/commons/6/65/No-Image-Placeholder.svg" alt=""> 
               <a class="tiny-link" href="#">Klikk her</a> for å lese mer om ting.
-            </p>
+              </p>
             <p class="status-ok">Tilgjengelig</p>
             <p class="status-bad">Utilgjengelig</p>
           </section>
 
           <section>
             <h4>Språk</h4>
-            <p>
-              <img src="https://upload.wikimedia.org/wikipedia/commons/b/bc/Flag_of_Norway.svg" alt="no"> <!-- bevisst: alt «no» er ikke beskrivende -->
-              <img src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Flag_of_the_United_Kingdom.svg" alt="en">
-            </p>
+            <ul>
+              <li><img src="https://upload.wikimedia.org/wikipedia/commons/b/bc/Flag_of_Norway.svg" alt="no" title="Norsk bokmål"> </li>
+              <li><img src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Flag_of_the_United_Kingdom.svg" alt="en" title="Engelsk"></li>
+            </ul>
           </section>
         </aside>
 
@@ -68,16 +60,13 @@
           </h1>
           <section>
             <h2>Denne teksten er veldig vanskelig å lese fordi den er smal, i store bokstaver og har lav kontrast. Den er også justert med blokkjustering som kan skape store mellomrom i linjene. Klikk her for mer info.</h2>
-
-
-          <article>
             <h4>Kontakt oss</h4>
           <form>
             <label>Navn:
-              <input type="text" id="navn" placeholder="Ola Nordmann" required>
+              <input type="text" id="navn" placeholder="Ola Nordmann..." required>
             </label>
             <label>Email:
-              <input type="email" id="email" placeholder="eksempel@hiof.no" required>
+              <input type="email" id="email" placeholder="eksempel@hiof.no..." required>
             </label>
             <label>Telefon:
               <input type="tel" placeholder="980 00 000" required>
@@ -91,51 +80,64 @@
             </select>
 
             <label for="">Melding:
-              <textarea rows="3" placeholder="Lorum ipsum"></textarea>
+              <textarea rows="3" placeholder="Melding....."></textarea>
             </label>
             
             <p class="help">Felt merket med <span class="required">rød farge</span> er obligatoriske.</p>
             <p class="error">skjemaet er feil utfylt</p> 
             <input type="submit" value="Send">
-          </article>
-        </form>
+          </form>
 
           <article>
             <h4>Mer innhold</h4>
-            <p>
-              <a href="#" tabindex="3">Les mer</a> |
-              <a href="#" tabindex="1">Klikk her</a> |
-              <a href="#" tabindex="2">Trykk her</a>
-            </p>
-            <p>
-              <span class="btn" tabindex="4">Primær handling</span>
-            </p>
+            <ol>
+              <li><a href="#">Les mer om eksamensoppgaver 1 her</a></li>
+              <li><a href="#">Mer informasjon om eksamensoppgaver 2 finner du her</a></li>
+              <li><a href="#">informasjon om eksamensoppgaver 3 blir publisert her</a></li>
+            </ol>
+            <button>Start eksamen</button>
           </article>
 
-          <darticle>
-            <h4>Tabell uten overskrifter</h4>
+          <article>
+            <h3>Tabell uten overskrifter</h3>
             <table>
-              <tr><td>1</td><td>2</td><td>3</td></tr>
-              <tr><td>4</td><td>5</td><td>6</td></tr>
-              <tr><td>7</td><td>8</td><td>9</td></tr>
+              <tbody>
+                <tr>
+                  <th>Kolonne 1</th>
+                  <th>Kolonne 2</th>
+                  <th>Kolonne 3</th>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>3</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>5</td>
+                  <td>6</td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td>8</td>
+                  <td>9</td>
+                </tr>
+              </tbody>
             </table>
           </article>
 
           <article>
-            <h4>Masse lenker med samme tekst</h4>
+            <h3>Masse lenker med samme tekst</h3>
             <ul>
-              <li><a href="#">Les mer</a></li>
-              <li><a href="#">Les mer</a></li>
-              <li><a href="#">Les mer</a></li>
-              <li><a href="#">Les mer</a></li>
+              <li><a href="#">Oppgave om UU</a></li>
+              <li><a href="#">Oppgave om SEO</a></li>
+              <li><a href="#">Oppgave om Semantiskk HTMK</a></li>
+              <li><a href="#">Oppgave om CSS Grid og Flex</a></li>
             </ul>
           </article>
         </section> 
       </main>
-
-
     <footer>
-      <!-- bevisst: kontaktinfo kun i bilde uten alt-tekst -->
       <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Facebook_icon.svg" alt="Facebook ikon til lenke til facebook">
       <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Twitter_logo.svg" alt="Twitter ikon til lenke til Twitter">
       <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram ikon til lenke til Instagram">
